@@ -124,6 +124,16 @@ All backend unit and integration tests passed cleanly:
 
 ---
 
+## 🚀 Cloud Deployment (Vercel & Render)
+
+This project is pre-configured for automated cloud deployment:
+- **Backend (Render)**: FastAPI server with automated schema setup via [`render.yaml`](render.yaml) or manual Web Service.
+- **Frontend (Vercel)**: React + Vite Single Page Application with SPA routing via [`vercel.json`](vercel.json).
+
+👉 **For complete step-by-step instructions, see [`DEPLOYMENT.md`](DEPLOYMENT.md).**
+
+---
+
 ## 📁 Repository Structure
 
 ```
@@ -155,6 +165,9 @@ microgrid_load_forecaster/
 │   ├── api.md
 │   ├── testing.md
 │   └── viva-guide.md
+├── DEPLOYMENT.md         # Step-by-step Vercel & Render cloud setup
+├── render.yaml           # Render Cloud Blueprint specification
+├── vercel.json           # Vercel SPA routing and build configuration
 ├── README.md
 ├── README_SETUP.md
 ├── .env.example

@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api/v1';
+// Support production backend deployment (Render, etc.) via environment variable
+const rawUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const cleanUrl = rawUrl.replace(/\/$/, '');
+const API_BASE_URL = cleanUrl.endsWith('/api/v1') ? cleanUrl : `${cleanUrl}/api/v1`;
 
 const api = axios.create({
   baseURL: API_BASE_URL,
